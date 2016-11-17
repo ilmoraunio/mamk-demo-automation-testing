@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Notice: no tests yet specified\"",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "MIT",
@@ -14,8 +14,5 @@
     "express": "4.14.0",
     "morgan": "1.7.0",
     "path": "0.12.7"
-  },
-  "devDependencies": {
-    "nodemon": "^1.11.0"
   }
 }
