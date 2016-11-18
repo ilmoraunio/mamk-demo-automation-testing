@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Notice: no tests yet specified\"",
+    "test": "karma start --single-run",
     "start": "node server.js"
   },
   "author": "",
