@@ -11,7 +11,8 @@
   <title>Y-tunnuksia</title>
 
   <!--bootstrap and our app css file-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="app.css">
 
   <!--our app-->
@@ -20,14 +21,40 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-light bg-faded">
     <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand">Y-tunnuksia</a>
+      <div class="row">
+        <div class="navbar-brand">logo placeholder</div>
       </div>
     </div>
   </nav>
 
-  <div>Hello, world!</div>
+  <div class="container mt-1">
+    <div class="row">
+      <form>
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="ytunnus-addon">Y-tunnus</span>
+          <input type="text" class="form-control" name="ytunnus" aria-describedby="ytunnus-addon" placeholder="Voi esimerkiksi olla 1234567-8" />
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button">Lisää</button>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="row mt-1">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Yrityksiä</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tähän listaus lisättyjä y-tunnuksia</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>

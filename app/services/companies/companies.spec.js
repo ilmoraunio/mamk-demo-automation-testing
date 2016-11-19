@@ -12,6 +12,10 @@ describe("CompanyService", function () {
     expect(companyService.testApi.getCompanies()).toEqual([company]);
   });
 
+  it("should return empty collection if nothing added", function () {
+    expect(companyService.get()).toEqual([]);
+  });
+
   it("get from collection", function () {
     var companies = [{ ytunnus: "1" }, 
                      { ytunnus: "2" }];
