@@ -23,7 +23,7 @@ describe("CompanyValidation", function () {
     });
 
     it("returns OK for format NNNNNNN-T", function () {
-      expect(companyValidation.isYritystunnusValid("1234567-8")).toEqual(true);
+      expect(companyValidation.isYritystunnusValid("0737546-2")).toEqual(true);
     });
 
     it("returns error for other formats than NNNNNNN-T", function () {
