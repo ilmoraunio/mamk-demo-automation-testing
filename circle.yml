@@ -2,6 +2,7 @@ dependencies:
   pre:
     - npm install -g cypress-cli
     - npm install -g forever
+    - cypress install
 test:
   override:
     - npm test
