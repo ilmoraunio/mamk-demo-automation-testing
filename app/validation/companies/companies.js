@@ -4,6 +4,8 @@ var CompanyValidation = (function () {
     var Module = {
       init: function () {
         return this;
+      },
+      isYritystunnusValid: function () {
       }
     };
 
