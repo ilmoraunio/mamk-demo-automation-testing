@@ -5,7 +5,8 @@ var CompanyValidation = (function () {
       init: function () {
         return this;
       },
-      isYritystunnusValid: function () {
+      isYritystunnusValid: function (input) {
+        if (typeof input !== 'string') return false;
       }
     };
 
