@@ -8,7 +8,7 @@ var CompanyValidation = (function () {
       isYritystunnusValid: function (input) {
         if (typeof input !== 'string') return false;
         if ( ! input.match(/.{7}-\d/)) return false;
-        return true;
+        return true; // Have to change this part of implementation now
       }
     };
 
