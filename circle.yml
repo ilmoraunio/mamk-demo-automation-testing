@@ -7,4 +7,4 @@ test:
   override:
     - npm test
     - forever start server.js
-    - cypress ci # requires CYPRESS_CI_KEY (https://docs.cypress.io/docs/continuous-integration#section-acquire-a-cypress-secret-key)
+    - cypress run # requires CYPRESS_CI_KEY (https://docs.cypress.io/docs/continuous-integration#section-acquire-a-cypress-secret-key)
