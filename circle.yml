@@ -1,10 +1,15 @@
+machine:
+  node:
+    version: 5.10.0
 dependencies:
-  pre:
+  post:
     - npm install -g cypress-cli
     - npm install -g forever
     - cypress install
 test:
+  pre:
+    - npm start:
+        background: true
   override:
     - npm test
-    - forever start server.js
-    - cypress run # requires CYPRESS_CI_KEY (https://docs.cypress.io/docs/continuous-integration#section-acquire-a-cypress-secret-key)
+    - cypress ci # requires CYPRESS_CI_KEY (https://docs.cypress.io/docs/continuous-integration#section-acquire-a-cypress-secret-key)
