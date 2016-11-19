@@ -1,9 +1,9 @@
 dependencies:
   pre:
     - npm install -g cypress-cli
+    - npm install -g forever
 test:
   override:
     - npm test
-    - npm start -- --silent
-      background: true
+    - forever start server.js
     - cypress ci # requires CYPRESS_CI_KEY (https://docs.cypress.io/docs/continuous-integration#section-acquire-a-cypress-secret-key)
