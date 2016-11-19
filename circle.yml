@@ -4,5 +4,6 @@ dependencies:
 test:
   override:
     - npm test
-    - npm start -- --silent &
+    - npm start -- --silent
+      background: true
     - cypress ci # requires CYPRESS_CI_KEY (https://docs.cypress.io/docs/continuous-integration#section-acquire-a-cypress-secret-key)
