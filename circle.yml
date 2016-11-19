@@ -1,0 +1,7 @@
+dependencies:
+  pre:
+    - npm install -g cypress-cli
+test:
+  override:
+    - npm test
+    - cypress run
