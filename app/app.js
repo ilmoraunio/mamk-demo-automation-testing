@@ -1,11 +1,9 @@
-(function () {
+var App = (function () {
   'use strict';
 
-  angular.module('mamk-demo-angular', [
-    'ui.router'
-  ])
-  .config(function ($urlRouterProvider) {
-    $urlRouterProvider.otherwise("/");
-  });
-  
+  var Module = {
+    companyService: Object.create(CompanyService).init({companyModel: []})
+  };
+
+  return Module;
 })();

@@ -15,14 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        './node_modules/angular/angular.js',                             // angular
-        './node_modules/angular-ui-router/release/angular-ui-router.js', // ui-router
-        './node_modules/angular-mocks/angular-mocks.js',                 // loads our modules for tests
-        './app/services/companies/companies.js',                                 // our Companies factory
-        './app/components/companies/companies.js',                                 
-        './app/app.js',                                                  // our angular app
-        './app/services/companies/companies.spec.js',
-        './app/components/companies/companies.spec.js'
+        './app/services/companies/companies.js',
+        './app/models/companies/companies.js',
+        './app/app.js',
+        './app/services/companies/companies.spec.js'
     ],
 
 
