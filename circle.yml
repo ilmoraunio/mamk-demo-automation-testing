@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 5.10.0
+    version: 5.0.0
 dependencies:
   post:
     - npm install -g cypress-cli
@@ -12,4 +12,4 @@ test:
         background: true
   override:
     - npm test
-    - cypress ci # requires CYPRESS_CI_KEY (https://docs.cypress.io/docs/continuous-integration#section-acquire-a-cypress-secret-key)
+    #- cypress ci # requires CYPRESS_CI_KEY (https://docs.cypress.io/docs/continuous-integration#section-acquire-a-cypress-secret-key)
