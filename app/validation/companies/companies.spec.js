@@ -31,8 +31,13 @@ describe("CompanyValidation", function () {
       expect(companyValidation.isYritystunnusValid("foo")).toEqual(false);
     });
 
-    it("0737546-2 is valid");
-    it("1572860-0 is valid");
+    it("0737546-2 is valid", function () {
+      expect(companyValidation.isYritystunnusValid("0737546-2")).toEqual(true);
+    });
+
+    it("1572860-0 is valid", function () {
+      expect(companyValidation.isYritystunnusValid("1572860-0")).toEqual(true);
+    });
     it("1572860-9 is not valid");
 
   });
