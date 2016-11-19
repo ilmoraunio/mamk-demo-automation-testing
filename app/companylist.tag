@@ -2,12 +2,12 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Yrityksiä</th>
+        <th>Yritystunnuksia</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Tähän listaus lisättyjä y-tunnuksia</td>
+      <tr each={ item, i in opts.items }>
+        <td>{item.ytunnus}</td>
       </tr>
     </tbody>
   </table>

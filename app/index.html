@@ -8,7 +8,7 @@
 
   <base href="/">
 
-  <title>Y-tunnuksia</title>
+  <title>Yritystunnuksia</title>
 
   <script
   src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
@@ -44,14 +44,11 @@
       <companylist></companylist>
     </div>
 
-    <sample></sample>
-    <script type="riot/tag" src="sample.tag"></script>
     <script type="riot/tag" src="companyform.tag"></script>
     <script type="riot/tag" src="companylist.tag"></script>
     <script src="https://cdn.jsdelivr.net/riot/2.6/riot+compiler.min.js"></script>
-    <script>riot.mount('sample')</script>
-    <script>riot.mount('companyform')</script>
-    <script>riot.mount('companylist')</script>
+    <script>riot.mount('companyform', { companyService: App.companyService})</script>
+    <script>riot.mount('companylist', { items: App.companyService.get()})</script>
 
   </div>
 </body>
