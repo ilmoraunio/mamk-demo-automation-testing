@@ -31,36 +31,21 @@
 
   <div class="container mt-1">
     <div class="row">
-      <form>
-        <div class="input-group input-group-lg">
-          <span class="input-group-addon" id="ytunnus-addon">Y-tunnus</span>
-          <input type="text" class="form-control" name="ytunnus" aria-describedby="ytunnus-addon" placeholder="Voi esimerkiksi olla 1234567-8" />
-          <span class="input-group-btn">
-            <button class="btn btn-secondary" type="button">Lisää</button>
-          </span>
-        </div>
-      </form>
+      <companyform></companyform>
     </div>
     <div class="row mt-1">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Yrityksiä</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Tähän listaus lisättyjä y-tunnuksia</td>
-          </tr>
-        </tbody>
-      </table>
+      <companylist></companylist>
     </div>
 
     <sample></sample>
     <script type="riot/tag" src="sample.tag"></script>
+    <script type="riot/tag" src="companyform.tag"></script>
+    <script type="riot/tag" src="companylist.tag"></script>
     <script src="https://cdn.jsdelivr.net/riot/2.6/riot+compiler.min.js"></script>
     <script>riot.mount('sample')</script>
-    
+    <script>riot.mount('companyform')</script>
+    <script>riot.mount('companylist')</script>
+
   </div>
 </body>
 </html>
