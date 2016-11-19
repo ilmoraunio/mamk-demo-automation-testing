@@ -7,6 +7,8 @@ var CompanyValidation = (function () {
       },
       isYritystunnusValid: function (input) {
         if (typeof input !== 'string') return false;
+        if ( ! input.match(/.{7}-\d/)) return false;
+        return true;
       }
     };
 

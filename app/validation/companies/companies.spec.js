@@ -21,6 +21,15 @@ describe("CompanyValidation", function () {
       expect(companyValidation.isYritystunnusValid(123)).toEqual(false);
       expect(companyValidation.isYritystunnusValid(/foo/)).toEqual(false);
     });
+
+    it("returns OK for format NNNNNNN-T", function () {
+      expect(companyValidation.isYritystunnusValid("1234567-8")).toEqual(true);
+    });
+
+    it("returns error for other formats than NNNNNNN-T", function () {
+      expect(companyValidation.isYritystunnusValid("12345678")).toEqual(false);
+      expect(companyValidation.isYritystunnusValid("foo")).toEqual(false);
+    });
   });
 
 });
