@@ -6,10 +6,8 @@ var CompanyValidation = (function () {
         return this;
       },
       isYritystunnusValid: function (input) {
-        debugger;
-
         if (typeof input !== 'string') return false;
-        if ( ! input.match(/.{7}-\d/)) return false;
+        if ( ! input.match(/^.{7}-\d{1,2}/)) return false;
         
         var yritystunnusAlkuosa = new String(input.match(/^.{7}/)); // => avoid being typeof "object"
 

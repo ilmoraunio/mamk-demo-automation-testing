@@ -3,7 +3,8 @@ describe("CompanyService", function () {
   var spiedCompanyModel;
 
   beforeEach(function () {
-    companyService = Object.create(CompanyService).init({companyModel: []});
+    companyService = Object.create(CompanyService).init({companyModel: [],
+                                                         companyValidation: Object.create(CompanyValidation).init()});
   });
 
   it("add to collection", function () {

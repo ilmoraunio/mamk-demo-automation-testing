@@ -1,13 +1,18 @@
 var CompanyService = (function() {
   'use strict';
   var companies;
+  var companyValidation;
 
   var Module = {
     init: function (dependencies) {
       companies = dependencies.companyModel;
+      companyValidation = dependencies.companyValidation;
       return this;
     },
     add: function (company) {
+      if ( ! companyValidation.isYritystunnusValid(company.ytunnus)) {
+        throw new Error("Yritystunnus '" + company.ytunnus + "' ei ole oikeanmuotoinen");
+      }
       return companies.push(company);
     },
     get: function () {

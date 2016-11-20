@@ -10,12 +10,17 @@
   </form>
 
   submit(e) {
-    if (this.ytunnus.value && this.ytunnus.value.trim()) {
-      opts.companyService.add({ ytunnus: this.ytunnus.value.trim() });
+    try {
+      if (this.ytunnus.value && this.ytunnus.value.trim()) {
+        opts.companyService.add({ ytunnus: this.ytunnus.value.trim() });
+        riot.update();
+        this.ytunnus.value = "";
+      }
+    } catch (exception) {
+      App.errors.push(exception.message);
+    } finally {
       riot.update();
-      this.ytunnus.value = "";
+      return false;
     }
-
-    return false;
   }
 </companyform>

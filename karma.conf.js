@@ -15,11 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        './app/services/companies/companies.js',
         './app/validation/companies/companies.js',
+        './app/services/companies/companies.js',
         './app/app.js',
-        './app/services/companies/companies.spec.js',
-        './app/validation/companies/companies.spec.js'
+        './app/validation/companies/companies.spec.js',
+        './app/services/companies/companies.spec.js'
     ],
 
 
