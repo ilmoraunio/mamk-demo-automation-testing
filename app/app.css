@@ -1,0 +1,6 @@
+.logo {
+  background-image: url(logo.svg), none;
+  background-repeat:no-repeat;
+  width:11.4rem;
+  background-size:contain;
+}
