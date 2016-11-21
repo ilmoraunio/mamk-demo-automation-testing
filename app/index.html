@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="app.css">
 
   <!--our app-->
+  <script src="validation/companies/companies.js"></script>
   <script src="services/companies/companies.js"></script>
   <script src="app.js"></script>
 </head>
@@ -37,6 +38,7 @@
       </div>
     </div>
   </nav>
+  <validationerror></validationerror>
 
   <div class="container mt-1">
     <div class="row">
@@ -48,9 +50,11 @@
 
     <script type="riot/tag" src="companyform.tag"></script>
     <script type="riot/tag" src="companylist.tag"></script>
+    <script type="riot/tag" src="validationerror.tag"></script>
     <script src="https://cdn.jsdelivr.net/riot/2.6/riot+compiler.min.js"></script>
     <script>riot.mount('companyform', { companyService: App.companyService})</script>
     <script>riot.mount('companylist', { items: App.companyService.get()})</script>
+    <script>riot.mount('validationerror', { errors: App.errors})</script>
 
   </div>
 </body>
